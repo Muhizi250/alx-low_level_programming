@@ -1,16 +1,2 @@
 #!/bin/bash
-
-# Check if the C file variable is set
-if [ -z "$CFILE" ]; then
-    echo "Error: CFILE variable not set."
-    exit 1
-fi
-
-# Extract the file name without extension
-FILENAME=$(basename "$CFILE" .c)
-
-# Generate assembly code with GCC and save it to a .s file
-gcc -S -masm=intel "$CFILE" -o "$FILENAME.s"
-
-echo "Assembly code generated and saved to $FILENAME.s"
-
+gcc -S -masm=intel $CFILE

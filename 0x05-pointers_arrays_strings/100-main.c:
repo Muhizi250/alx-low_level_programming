@@ -1,0 +1,4 @@
+n.c:13:10: error: implicit declaration of function ‘_atoi’ [-Werror=implicit-function-declaration]
+   13 |     nb = _atoi("98");
+      |          ^~~~~
+cc1: all warnings being treated as errors
